@@ -1,0 +1,38 @@
+{
+  "name": "kasa_real_state",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Real estate application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "node --watch server/server.js",
+    "client": "pnpm --prefix client run dev",
+    "dev": "concurrently \"pnpm run server\" \"pnpm run client\"",
+    "data:import": "node server/seeder",
+    "data:destroy": "node server/seeder -d",
+    "build": "pnpm install && pnpm --prefix client install && pnpm --prefix client run build"
+  },
+  "keywords": [
+    "real estate",
+    "kasa",
+    "application"
+  ],
+  "author": "Carlos Barahona",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.0.1",
+    "nodemailer": "^7.0.11",
+    "path": "^0.12.7"
+  }
+}
