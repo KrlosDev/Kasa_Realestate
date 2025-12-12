@@ -14,7 +14,8 @@ const roleSchema = new mongoose.Schema(
         "ejecutivo_ventas",
         "ejecutivo_banco"
       ]
-    }
+    },
+    canRegister: { type: Boolean, default: false },
   },
   { timestamps: true }
 );

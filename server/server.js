@@ -12,6 +12,7 @@ import { notFound, errorHandler } from "./middleware/errorHandler.js";
 
 //routes
 import authRoutes from "./routes/authRoutes.js";
+import listingsRoutes from "./routes/listingsRoutes.js";
 
 dotenv.config();
 
@@ -31,6 +32,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 //routes
 app.use("/api/auth", authRoutes);
+app.use("/api/list", listingsRoutes);
 
 //error handlers
 app.use("/api", notFound);

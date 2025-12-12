@@ -6,6 +6,8 @@ const licenseTypesSchema = new mongoose.Schema(
     maxUsers: { type: Number, required: true },
     price: { type: Number, required: true },
     durationInDays: { type: Number, required: true },
+    isForBrokers: { type: Boolean, default: false },
+    isFeatured: { type: Boolean, default: false },
   },
   { timestamps: true }
 );
